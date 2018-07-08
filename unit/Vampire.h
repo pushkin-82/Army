@@ -8,10 +8,8 @@ class VampireAbility;
 
 class Vampire : public Unit {
 	public:
-		Vampire(const char* title = "Vampire", int hitPointsLimit = 200, int damage = 40);
+		Vampire(std::string title = "Vampire", int hitPointsLimit = 200, int damage = 40);
 		virtual ~Vampire();
-
-        Vampire& turnToVampire(Unit* unit);
 };
 
 #endif // VAMPIRE_H

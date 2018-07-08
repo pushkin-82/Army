@@ -7,7 +7,7 @@
 
 class Berserker : public Unit {
 	public:
-		Berserker(const char* title = "Berserker", int hitPointsLimit = 100, int damage = 15);
+		Berserker(std::string title = "Berserker", int hitPointsLimit = 100, int damage = 15);
 		virtual ~Berserker();
 
 		void addHitPoints(int hp);

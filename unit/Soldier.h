@@ -6,8 +6,10 @@
 
 class Soldier : public Unit {
     public:
-        Soldier(const char* title = "Soldier", int hitPointsLimit = 100, int damage = 10);
+        Soldier(std::string title = "Soldier", int hitPointsLimit = 100, int damage = 10);
         virtual ~Soldier();
+        
+//        virtual
 };
 
 #endif //SOLDIER_H

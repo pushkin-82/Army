@@ -3,22 +3,29 @@
 
 #include <iostream>
 #include "../exceptions.h"
+#include "Undead.h"
 
-class State {
+class State : public Undead {
     protected:
-        const char* title;
+        std::string title;
         int hitPoints;
         int hitPointsLimit;
         int damage;
 
     public:
-        State(const char* title, int hitPointsLimit, int damage);
+        State(std::string title, int hitPointsLimit, int damage);
         virtual ~State();
 
-        const char* getTitle() const;
+        std::string getTitle() const;
         int getHitPoints() const;
         int getHitPointsLimit() const;
         int getDamage() const;
+
+        void setTitle(std::string title);
+        void setHitPoints(int hp);
+        void setHitPointsLimit(int hp);
+        void setDamage(int dmg);
+
 
         void ensureIsAlive();
 

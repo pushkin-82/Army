@@ -1,10 +1,13 @@
 #include "Berserker.h"
 
-Berserker::Berserker(const char* title, int hitPointsLimit, int damage):
+Berserker::Berserker(std::string title, int hitPointsLimit, int damage):
 	Unit(title, hitPointsLimit, damage) {
 		this->ability = new BerserkerAbility(this);
+    }
+
+Berserker::~Berserker() {
+    delete this->ability;
 }
-Berserker::~Berserker() {}
 
 void Berserker::addHitPoints(int hp) {
 	this->ensureIsAlive();

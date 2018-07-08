@@ -6,7 +6,7 @@
 
 class Rogue : public Unit {
 	public:
-		Rogue(const char* title = "Rogue", int hitPointsLimit = 80, int damage = 20);
+		Rogue(std::string title = "Rogue", int hitPointsLimit = 80, int damage = 20);
 		virtual ~Rogue();
 };
 
